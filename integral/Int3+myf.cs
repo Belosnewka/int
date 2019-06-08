@@ -18,7 +18,7 @@ namespace integral
                         double xi = a[0] + hx / 2 + i * hx;
                         double yj = a[1] + hy / 2 + j * hy;
                         double zk = a[2] + hz / 2 + k * hz;
-                        S -= hx * hy * hz * xi * xi * Math.Sin(zk) * L_Pol.koef(yj, zk, num) * f(xi * Math.Sin(zk) * Math.Cos(yj), xi * Math.Sin(zk) * Math.Sin(yj), xi * Math.Cos(zk));// минус тк должно быть -f
+                        S -= hx * hy * hz * xi * xi * Math.Sin(zk) * L_Pol.koef(yj, zk, num) * f(xi * Math.Sin(zk) * Math.Cos(yj), xi * Math.Sin(zk) * Math.Sin(yj), xi * Math.Cos(zk));
                     }
             return S;
         }

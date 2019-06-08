@@ -19,7 +19,7 @@ namespace integral
             m = n - s + (3 + 2 * (l - 2)) + 2;
             if (m == 0) return Pol(z, l) / l / (l + 1);
             else if (m <= l) return Math.Cos(m * y) * PolPri(z, l, m) / l / (l + 1);
-            else return Math.Cos((m - l) * y) * PolPri(z, l, m - l) / l / (l + 1);
+            else return Math.Sin((m - l) * y) * PolPri(z, l, m - l) / l / (l + 1);
         }
         public static double SF(double y, double z, int n)
         {
@@ -30,9 +30,9 @@ namespace integral
                 l++;
             }
             m = n - s + (3 + 2 * (l - 2)) + 2;
-            if (m == 0) return Pol(z, l) / l / (l + 1);
+            if (m == 0) return Pol(z, l);
             else if (m <= l) return Math.Cos(m * y) * PolPri(z, l, m);
-            else return Math.Cos((m - l) * y) * PolPri(z, l, m - l);
+            else return Math.Sin((m - l) * y) * PolPri(z, l, m - l);
         }
         public static double PolPri(double z, double l, int m)
         {
